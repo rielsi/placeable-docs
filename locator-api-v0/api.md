@@ -81,6 +81,17 @@ Example:
 
 ### Response ###
 
+### Response Code ###
+
+If the search completes successfully with results, then the HTTP response code will be 200, 
+when there are no locations within range of the search then the API HTTP response code will be 404, and the XML an empty result set
+
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<results>
+	</results>
+	
+If the search critera wasn't found the service will also respond with a 404 code, but the content will default to be HTML
+
 
 #### XML ####
 
