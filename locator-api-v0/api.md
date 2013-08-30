@@ -1,6 +1,6 @@
-# Location Insight API #
+# Placeable Locator API v0 #
 
-The LocationInsight API is a read-only REST API that enables remote applications to consume local search data and offer geospatial search capabilities. The API is available with two response formats: XML and JSON, allowing developers to use whichever format is most natural. This API directly maps to the web search capabilities, all functionality and data available on the web is available through this API.
+This is a read-only REST API that enables remote applications to consume local search data and offer geospatial search capabilities. The API is available with two response formats: XML and JSON, allowing developers to use whichever format is most natural. This API directly maps to the web search capabilities, all functionality and data available on the web is available through this API.
 
 ## Search ##
 
@@ -61,7 +61,7 @@ Example:
 
 Required: false
 
-Options: These are specific to your data.                                               a
+Options: These are specific to your data.                                               
 
 Description:  
 
