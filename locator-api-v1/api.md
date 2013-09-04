@@ -1,20 +1,44 @@
-Placeable Locator API v1
-==============
+# Placeable Locator API v1
 
+This is a read-only REST API that enables remote applications to consume local search data and offer geospatial search capabilities.
 
+## Search ##
 
-## Resource 
+Method: get 
 
-**GET /v1/search?q=colorado+springs**
+Url:  `/v1/search`
 
-## Details
+Examples:
 
-This method returns a list of locations found by searching around the location specified in the q paramter.
+    /v1/search?q=colorado+springs
+    
+or
 
-## Query Parameters
+    http://your.doamin.com/v1/search?q=colorado+springs
+    
+    
+Note the examples assume you have the api activated, and have data loaded for you site in Colorado Springs
 
+### Parameters ###
 
-sortOrder
+#### q (as in q=80202) ####
+
+Required: true  
+
+Description: The default search parameter to search for a location. This must be URL encoded.
+
+Example:  
+
+	/search?q=Denver%20CO
+
+You can also search by lat & long. Just pass the parameters as shown below:
+
+	/search?q=latitude:39.770224029999994;longitude:-105.02012416 
+
+The colons `:` and the semicolon `;` are required.   
+    
+   
+### sortOrder
 
 Required: false
 
@@ -28,42 +52,36 @@ Description:
 
 
 Example:
-/v1/search?q=Denver%20CO&sortOrder=NameAZ
+
+    /v1/search?q=Denver%20CO&sortOrder=NameAZ
 
 
-filters
+### filters
 
 Required: false
 
-Options: These are specific to your data.
+These are specific to your data. If your data has "atmLanguages" with the options of "english, french and spanish" and you want to filter down to only "english" locations the URL would look like:  
+
+	/search?q=Denver%20CO&filters=atmLanguages-_-english  
+
+and if you'd like to filter in english and spanish the url would look like:  
+
+	/search?q=Denver%20CO&filters=atmLanguages-_-english-_-spanish   
+
+The `_-_` is the delimiter between filter/value pairs.
 
 
-page
+### page
 
 Required: false
 
 Options: Return a different page of the result sets.
 
 Example:
-
 Return the second page 
-/v1/search?q=Denver%20CO&sortOrder=NameAZ&page=2
 
+     /v1/search?q=Denver%20CO&sortOrder=NameAZ&page=2
 
-
-
-Description:
-These are specific to your data and will filter in specific results. If your data has
-“atmLanguages” with the options of “english, french and spanish” and you want to filter
-in only “english” locations the URL would look like:
-/search?q=Denver%20CO&filters=atmLanguages-­‐_-­‐english
-and if you’d like to filter in english and spanish the url would look like:
-/search?q=Denver%20CO&filters=atmLanguages-­‐_-­‐english-­‐_-­‐spanish
-As you can see the _-­‐_ is the delimiter between filter/value pairs.
-
-
-Example:
-/v1/search?q=Denver%20CO&filters=atmLanguages-­‐_-­‐spanish_-­‐_atmLanguages-­‐_-­‐french
 
 
 ## HTTP Codes
