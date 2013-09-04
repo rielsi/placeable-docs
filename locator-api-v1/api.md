@@ -2,6 +2,17 @@
 
 This is a read-only REST API that enables remote applications to consume local search data and offer geospatial search capabilities.
 
+
+## Authorization
+
+The api has been secured using a preshared key. Each request to the API should have this as a parameter, or the service will respond with an HTTP status code of 400
+
+
+GET /v1/search?q=fargo&key=c12226cc85f0662db6aa21d1b5c7b664adb41497
+
+NOTE This api key has been omitted for the resource documentation for the sake of brevity.
+
+
 ## Search ##
 
 Method: get 
