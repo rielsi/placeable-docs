@@ -19,7 +19,7 @@ Example:
 
 NOTE: This API key has been omitted from the other examples in the documentation for brevity and clarity.
 
-To obtain your auth key, contact your accoutn manager, or <support@placeable.com>
+To obtain your auth key, contact your account manager, or <support@placeable.com>
 
 
 ## Search ##
