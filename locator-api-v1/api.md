@@ -3,7 +3,7 @@
 This is a read-only REST API that enables remote applications to consume local search data and offer geospatial search capabilities.
 
 
-## Authorization
+### Authorization
 
 The api has been secured using a preshared key. Each request to the API should have this as a parameter, or the service will respond with an HTTP status code of 400
 
