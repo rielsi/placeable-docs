@@ -3,21 +3,28 @@
 This is a read-only REST API that enables remote applications to consume local search data and offer geospatial search capabilities.
 
 
-### Authorization
+## Authorization
 
-The api has been secured using a preshared key. Each request to the API should have this as a parameter, or the service will respond with an HTTP status code of 400
+The API is secured using a pre-shared key. Each request to the API must have this as a parameter, or the service will respond with an HTTP status code of 400.
 
+Method: GET
 
-GET /v1/search?q=fargo&key=c12226cc85f0662db6aa21d1b5c7b664adb41497
+Parameter: key
 
-NOTE This api key has been omitted for the resource documentation for the sake of brevity.
+Required: TRUE  
+
+Example:
+
+     /v1/search?q=fargo&key=c12226cc85f0662db6aa21d1b5c7b664adb41497
+
+NOTE: This API key has been omitted from the other examples in the documentation for brevity and clarity.
 
 
 ## Search ##
 
-Method: get 
+Method: GET 
 
-Url:  `/v1/search`
+URL:  `/v1/search`
 
 Examples:
 
@@ -28,13 +35,13 @@ or
     http://your.doamin.com/v1/search?q=colorado+springs
     
     
-Note the examples assume you have the api activated, and have data loaded for you site in Colorado Springs
+NOTE: The example assume you have the API activated, and have data loaded for you site in Colorado Springs.
 
 ### Parameters ###
 
 #### q (as in q=80202) ####
 
-Required: true  
+Required: TRUE  
 
 Description: The default search parameter to search for a location. This must be URL encoded.
 
@@ -51,7 +58,7 @@ The colons `:` and the semicolon `;` are required.
    
 ### sortOrder
 
-Required: false
+Required: FALSE
 
 Options: “Distance, NameAZ, NameZA”
 
@@ -69,13 +76,13 @@ Example:
 
 ### filters
 
-Required: false
+Required: FALSE
 
 These are specific to your data. If your data has "atmLanguages" with the options of "english, french and spanish" and you want to filter down to only "english" locations the URL would look like:  
 
 	/search?q=Denver%20CO&filters=atmLanguages-_-english  
 
-and if you'd like to filter in english and spanish the url would look like:  
+and if you'd like to filter in english and spanish the URL would look like:  
 
 	/search?q=Denver%20CO&filters=atmLanguages-_-english-_-spanish   
 
@@ -84,7 +91,7 @@ The `_-_` is the delimiter between filter/value pairs.
 
 ### page
 
-Required: false
+Required: FALSE
 
 Options: Return a different page of the result sets.
 
