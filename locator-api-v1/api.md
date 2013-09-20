@@ -34,7 +34,7 @@ Examples:
     
 or
 
-    http://your.doamin.com/v1/search?q=colorado+springs
+    http://your.domain.com/v1/search?q=colorado+springs
     
     
 NOTE: The example assume you have the API activated, and have data loaded for you site in Colorado Springs.
