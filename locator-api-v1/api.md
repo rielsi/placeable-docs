@@ -179,7 +179,16 @@ Below is an example of a search which returned zero results
 
 
 
+### No Auth Key Provided
+		{
+		    "error": "Key is required to search the API."
+		}
 
+### Invalid Key Provided
+		{
+		    "error": "This key ('invalid key name') has not been authorized"
+		}
+		
 ## Full Response
 
   Below is a full response, for each result any flexible fields which have been loaded during the dataload will be passed directly through.
