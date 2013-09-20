@@ -103,17 +103,6 @@ Return the second page
      /v1/search?q=Denver%20CO&sortOrder=NameAZ&page=2
 
 
-
-## HTTP Codes
-
-| Status Code               | Description       |
-|:------------------|:------------|
-|400      | No key supplied, or bad request     | 
-|404      | Couldn't find  search origin given the q parameter      |
-
-
-
-
     
 ### Response Details
 
@@ -182,19 +171,26 @@ Below are the different types of errors that can occur if the right information 
 
 | Status Code               | Description       |
 |:------------------|:------------|
-|400      | No key supplied, or bad request     | 
-|404      | Couldn't find  search origin given the q parameter      |
-### No Auth Key Provided
+|400      | No auth key provided, or bad request, or json is not allowed for the site    | 
+|401      | Unauthorized api key.
+|404      | Couldn't find  search origin given the q parameter, or unknown location |
+
+### No Auth Key Provided (400)
 		{
 		    "error": "Key is required to search the API."
 		}
 
-### Invalid Key Provided
+### Json not allowed (400)
+		{
+		    "error": ""Json is not allowed for 'site'.""
+		}
+
+### Invalid Key Provided(401)
 		{
 		    "error": "This key ('invalid key name') has not been authorized"
 		}
 		
-### Unknown Location
+### Unknown Location(404)
 		{
 		    "error": "Unknown location"
 		}		
