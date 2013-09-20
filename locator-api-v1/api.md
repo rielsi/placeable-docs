@@ -178,7 +178,12 @@ Below is an example of a search which returned zero results
 		
 
 ## Errors
+Below are the different types of errors that can occur if the right information is not provided to the api.
 
+| Status Code               | Description       |
+|:------------------|:------------|
+|400      | No key supplied, or bad request     | 
+|404      | Couldn't find  search origin given the q parameter      |
 ### No Auth Key Provided
 		{
 		    "error": "Key is required to search the API."
