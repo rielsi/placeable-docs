@@ -177,7 +177,7 @@ Below is an example of a search which returned zero results
 		}
 		
 
-
+## Errors
 
 ### No Auth Key Provided
 		{
@@ -188,6 +188,11 @@ Below is an example of a search which returned zero results
 		{
 		    "error": "This key ('invalid key name') has not been authorized"
 		}
+		
+### Unknown Location
+		{
+		    "error": "Unknown location"
+		}		
 		
 ## Full Response
 
