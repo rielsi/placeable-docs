@@ -106,6 +106,7 @@ You can apply multiple categories by separating them with a comma, like "Bank, A
 * Small Plates Restaurant
 * Soul Food Restaurant
 * Spanish Restaurant
+* Steak House
 * Sushi Restaurant
 * Taco Restaurant
 * Taiwanese Restaurant
