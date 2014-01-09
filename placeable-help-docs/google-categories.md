@@ -8,10 +8,14 @@ You can apply multiple categories by separating them with a comma, like "Bank, A
 * ATM
 * Bank
 * Bank or ATM
+
 --
+
 * Car Repair and Maintenance
 * Motorcycle Repair Shop
+
 --
+
 * Insurance 
 * Insurance Agency
 * Auto Insurance Agency
@@ -20,19 +24,29 @@ You can apply multiple categories by separating them with a comma, like "Bank, A
 * Life Insurance Agency
 * Motorcycle Insurance Agency
 * Renter's Insurance Agency
+
 --
+
 * Financial Planner
 * Financial Consultant
+
 --
+
 * Money Order Service
 * Money Transfer Service
+
 --
+
 * Movie Theater
 * Imax Theater
+
 --
+
 * Travel 
 * Travel Agency
+
 --
+
 * Restaurant
 * Restaurant or Cafe
 * Bar
