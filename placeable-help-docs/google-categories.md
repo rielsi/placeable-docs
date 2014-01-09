@@ -9,6 +9,7 @@ You can apply multiple categories by separating them with a comma, like "Bank, A
 * Bank
 * Bank or ATM
 
+--
 
 * Car Repair and Maintenance
 * Motorcycle Repair Shop
