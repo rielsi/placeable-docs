@@ -9,20 +9,24 @@ You can apply multiple categories by separating them with a comma, like "Bank, A
 * Bank
 * Bank or ATM
 
+
 * Car Repair and Maintenance
 * Motorcycle Repair Shop
+
 
 * Insurance 
 * Insurance Agency
 * Auto Insurance Agency
 * Health Insurance Agency
 * Home Insurance Agency
-* Life Insurance Agency	
+* Life Insurance Agency
 * Motorcycle Insurance Agency
 * Renter's Insurance Agency
 
+
 * Financial Planner
 * Financial Consultant
+
 
 * Money Order Service
 * Money Transfer Service
@@ -30,48 +34,50 @@ You can apply multiple categories by separating them with a comma, like "Bank, A
 * Movie Theater
 * Imax Theater
 
+
 * Travel 
 * Travel Agency
 
+
 * Restaurant
 * Restaurant or Cafe
-* Bar			
-* Bar & Grill	
+* Bar
+* Bar & Grill
 * Deli 
 * Sandwich Shop
 * American Restaurant
-* Asian Fusion Restaurant	
+* Asian Fusion Restaurant
 * Asian Restaurant
-* Barbeque Restaurant	
+* Barbeque Restaurant
 * Breakfast Restaurant
 * Brunch Restaurant
 * Buffet Restaurant
 * Burrito Restaurant
 * Cajun Restaurant
-* Cantonese Restaurant	
-* Cheesesteak Restaurant	
-* Chicken Restaurant		
+* Cantonese Restaurant
+* Cheesesteak Restaurant
+* Chicken Restaurant
 * Chicken Wings Restaurant
 * Chinese Restaurant
 * Cuban Restaurant
 * Dim Sum Restaurant
 * Family Restaurant
 * Fast Food Restaurant
-* Fine Dining Restaurant	
-* Fish & Chips Restaurant	
+* Fine Dining Restaurant
+* Fish & Chips Restaurant
 * French Restaurant
 * Greek Restaurant
-* Hamburger Restaurant	
+* Hamburger Restaurant
 * Hawaiian Restaurant
-* Health Food Restaurant	
+* Health Food Restaurant
 * Hot Dog Restaurant
 * Hot Dog Stand
 * Indian Restaurant
-* Irish Pub			
+* Irish Pub
 * Irish Restaurant
 * Italian Restaurant
-* Japanese Restaurant		
-* Japanese Steakhouse	
+* Japanese Restaurant
+* Japanese Steakhouse
 * Jewish Restaurant
 * Korean Restaurant
 * Korean Barbecue Restaurant
@@ -83,13 +89,13 @@ You can apply multiple categories by separating them with a comma, like "Bank, A
 * Mexican Restaurant
 * Middle Eastern Restaurant
 * Mongolian Barbecue Restaurant
-* New American Restaurant	
+* New American Restaurant
 * Organic Restaurant
-* Oyster Bar Restaurant	
+* Oyster Bar Restaurant
 * Pizza Restaurant
 * Seafood Restaurant
 * Sichuan Restaurant
-* Small Plates Restaurant	
+* Small Plates Restaurant
 * Soul Food Restaurant
 * Spanish Restaurant
 * Sushi Restaurant
@@ -98,10 +104,10 @@ You can apply multiple categories by separating them with a comma, like "Bank, A
 * Tapas Restaurant
 * Tex* Mex Restaurant
 * Thai Restaurant
-* Traditional American Restaurant	
-* Vegan Restaurant		
-* Vegetarian Restaurant	
-* Vietnamese Restaurant	
+* Traditional American Restaurant
+* Vegan Restaurant
+* Vegetarian Restaurant
+* Vietnamese Restaurant
 
 **Links**
 
