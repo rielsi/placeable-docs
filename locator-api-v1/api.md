@@ -102,6 +102,17 @@ Return the second page
 
      /v1/search?q=Denver%20CO&sortOrder=NameAZ&page=2
 
+### callback
+
+Required: FALSE
+
+Options: Return the json wrapped in the specified callback. The ContentType for all calls with a callback is 'aplication/javascript'.
+
+Example:
+Wraps the json in "test" callback 
+
+     /v1/search?q=Denver%20CO&sortOrder=NameAZ&callback=test
+
 ## Advanced Search ##
   
  Method: GET
