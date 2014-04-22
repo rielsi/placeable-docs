@@ -22,7 +22,7 @@ NOTE: This API key has been omitted from the other examples in the documentation
 To obtain your auth key, contact your account manager, or <support@placeable.com>
 
 
-## Search ##
+## Standard Search ##
 
 Method: GET 
 
@@ -102,9 +102,47 @@ Return the second page
 
      /v1/search?q=Denver%20CO&sortOrder=NameAZ&page=2
 
-
+## Advanced Search ##
+  
+ Method: GET
+ 
+ URL: `/v1/search`
+ 
+ Examples:
+ 
+	/v1/search?t=80033&f=postal
+     
+ or
+ 
+ 	http://your.domain.com/v1/search?t=80033&f=postal
+ 
+### Parameters ###
+ 
+#### t (as in t=80033) ####
+ 
+ Required: TRUE  
+ 
+ Description: The term that you would like to search for. This must be URL encoded.
+ 
+ Example:  
+ 
+ 	/v1/search?t=80033
+ 
+#### f (as in f=postal) ####
+ 
+ Required: TRUE  
+ 
+ Description: The field that the term should be queried against. The field name must match the database and only fields that are made searchable by an administrator can be queried.
+ 
+ Example:  
+ 
+ 	/v1/search?t=80033&f=postal
+ 	
+ You can also include multiple fields in your search. Just pass the parameters as shown below:
+ 
+ 	v1/search?t=80033&f=postal,streetAddress
     
-### Response Details
+## Response Details ##
 
 The response consists of location data, and results. The location section contains information about where the search was carried out, and the results section contains the list of results that were found plus some metadata about the result set.
 
