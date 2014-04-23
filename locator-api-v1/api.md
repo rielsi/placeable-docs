@@ -106,7 +106,7 @@ Return the second page
 
 Required: FALSE
 
-Options: Return the json wrapped in the specified callback. The ContentType for all calls with a callback is 'aplication/javascript'.
+Options: Return the json wrapped in the specified callback. This paramater allows the response to be JSONP compatible.  The ContentType for all calls with a callback is 'aplication/javascript'.
 
 Example:
 Wraps the json in "test" callback 
