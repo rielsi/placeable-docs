@@ -1,4 +1,4 @@
-# Placeable Locator API v1
+t# Placeable Locator API v1
 
 This is a read-only REST API that enables remote applications to consume local search data and offer geospatial search capabilities.
 
@@ -49,11 +49,11 @@ Description: The default search parameter to search for a location. This must be
 
 Example:  
 
-	/search?q=Denver%20CO
+	/v1/search?q=Denver%20CO
 
 You can also search by lat & long. Just pass the parameters as shown below:
 
-	/search?q=latitude:39.770224029999994;longitude:-105.02012416 
+	/v1/search?q=latitude:39.770224029999994;longitude:-105.02012416 
 
 The colons `:` and the semicolon `;` are required.   
     
@@ -82,14 +82,31 @@ Required: FALSE
 
 These are specific to your data. If your data has "atmLanguages" with the options of "english, french and spanish" and you want to filter down to only "english" locations the URL would look like:  
 
-	/search?q=Denver%20CO&filters=atmLanguages-_-english  
+	/v1/search?q=Denver%20CO&filters=atmLanguages-_-english  
 
 and if you'd like to filter in english and spanish the URL would look like:  
 
-	/search?q=Denver%20CO&filters=atmLanguages-_-english-_-spanish   
+	/v1/search?q=Denver%20CO&filters=atmLanguages-_-english-_-spanish   
 
 The `_-_` is the delimiter between filter/value pairs.
 
+
+### page_size
+
+Required: FALSE
+
+Options: A numeric value between 1 and 50
+
+
+Description: 
+• page_size sets the number of results returned per page.  If page_size=25 and there are 100 results, there will be 4 pages, 25 results each.
+• If page_size is set to > 50, then 50 results will be returned per page.
+• If page_size is not set, the page_size as configured in the locator will be used.
+
+
+Example:
+
+    /v1/search?q=Denver%20CO&page_size=10
 
 ### page
 
@@ -102,6 +119,23 @@ Return the second page
 
      /v1/search?q=Denver%20CO&sortOrder=NameAZ&page=2
 
+### mask
+
+Required: FALSE
+
+Options: Must be set to a pre-configured mask name
+
+
+Description: 
+• By default, the API will return all of the available data fields.  If it is neccesary to return only a subset of the data, say for performance considerations, a "mask" can be configured.  
+• Multiple masks can be set up per API
+• Data masks need to be configured for each API.  See your Account Manager for details.
+
+
+Example:
+
+    /v1/search?q=Denver%20CO&mask=short_set
+    
 ### callback
 
 Required: FALSE
