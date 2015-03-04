@@ -49,11 +49,11 @@ Description: The default search parameter to search for a location. This must be
 
 Example:  
 
-	/search?q=Denver%20CO
+	/v1/search?q=Denver%20CO
 
 You can also search by lat & long. Just pass the parameters as shown below:
 
-	/search?q=latitude:39.770224029999994;longitude:-105.02012416 
+	/v1/search?q=latitude:39.770224029999994;longitude:-105.02012416 
 
 The colons `:` and the semicolon `;` are required.   
     
@@ -82,14 +82,91 @@ Required: FALSE
 
 These are specific to your data. If your data has "atmLanguages" with the options of "english, french and spanish" and you want to filter down to only "english" locations the URL would look like:  
 
-	/search?q=Denver%20CO&filters=atmLanguages-_-english  
+	/v1/search?q=Denver%20CO&filters=atmLanguages-_-english  
 
 and if you'd like to filter in english and spanish the URL would look like:  
 
-	/search?q=Denver%20CO&filters=atmLanguages-_-english-_-spanish   
+	/v1/search?q=Denver%20CO&filters=atmLanguages-_-english-_-spanish   
 
 The `_-_` is the delimiter between filter/value pairs.
 
+
+### refinements
+
+Required: FALSE
+
+Options: true
+
+
+Description: 
+• This option will expose the pre-configured filter options and filter groups for the result set.
+
+Example:
+
+    /v1/search?q=Denver%20CO&refinements=true
+
+		refinements: [
+		{
+			filterName: "filter",
+			filterValues: [
+				{
+					name: "filter-_-ABM",
+					count: 560
+				},
+				{
+					name: "filter-_-Branch",
+					count: 217
+				},
+				{
+					name: "filter-_-Pavilion",
+					count: 46
+				}
+					]
+		},
+		{
+			filterName: "locationTypeFilter",
+			filterValues: [
+				{
+					name: "locationTypeFilter-_-BranchABM",
+					count: 568
+				},
+				{
+					name: "locationTypeFilter-_-ABM",
+					count: 560
+				},
+				{
+					name: "locationTypeFilter-_-PavilionABM",
+					count: 397
+				},
+				{
+					name: "locationTypeFilter-_-Branch",
+					count: 217
+				},
+				{
+					name: "locationTypeFilter-_-Pavilion",
+					count: 46
+				}
+					]
+		},
+
+In the example above, there are 560 locations matching the filter "filter-_-ABM", 217 locations matching the filter "filter-_-Branch", etc.
+
+### page_size
+
+Required: FALSE
+
+Options: A numeric value between 1 and 50
+
+
+Description: 
+• page_size sets the number of results returned per page.  If page_size=25 and there are 100 results, there will be 4 pages, 25 results each.
+• If page_size is set to > 50, then 50 results will be returned per page.
+• If page_size is not set, the page_size as configured in the locator will be used.
+
+
+Example:
+
+    /v1/search?q=Denver%20CO&page_size=10
 
 ### page
 
@@ -101,6 +178,24 @@ Example:
 Return the second page 
 
      /v1/search?q=Denver%20CO&sortOrder=NameAZ&page=2
+
+### mask
+
+Required: FALSE
+
+Options: Must be set to a pre-configured mask name
+
+
+Description: 
+• By default, the API will return all of the available data fields.  If it is neccesary to return only a subset of the data, say for performance considerations, a "mask" can be configured.  
+• Multiple masks can be set up per API
+• Data masks need to be configured for each API.  See your Account Manager for details.
+
+
+Example (assuming there is a configured mask named "short_set")
+
+    /v1/search?q=Denver%20CO&mask=short_set
+    
 
 ### callback
 
