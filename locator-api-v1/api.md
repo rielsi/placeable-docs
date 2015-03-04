@@ -1,4 +1,4 @@
-t# Placeable Locator API v1
+# Placeable Locator API v1
 
 This is a read-only REST API that enables remote applications to consume local search data and offer geospatial search capabilities.
 
