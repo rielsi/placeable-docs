@@ -91,6 +91,66 @@ and if you'd like to filter in english and spanish the URL would look like:
 The `_-_` is the delimiter between filter/value pairs.
 
 
+### refinements
+
+Required: FALSE
+
+Options: true
+
+
+Description: 
+• This option will expose the pre-configured filter options and filter groups for the result set.
+
+Example:
+
+    /v1/search?q=Denver%20CO&refinements=true
+
+		refinements: [
+		{
+			filterName: "filter",
+			filterValues: [
+				{
+					name: "filter-_-ABM",
+					count: 560
+				},
+				{
+					name: "filter-_-Branch",
+					count: 217
+				},
+				{
+					name: "filter-_-Pavilion",
+					count: 46
+				}
+					]
+		},
+		{
+			filterName: "locationTypeFilter",
+			filterValues: [
+				{
+					name: "locationTypeFilter-_-BranchABM",
+					count: 568
+				},
+				{
+					name: "locationTypeFilter-_-ABM",
+					count: 560
+				},
+				{
+					name: "locationTypeFilter-_-PavilionABM",
+					count: 397
+				},
+				{
+					name: "locationTypeFilter-_-Branch",
+					count: 217
+				},
+				{
+					name: "locationTypeFilter-_-Pavilion",
+					count: 46
+				}
+					]
+		},
+
+In the example above, there are 560 locations matching the filter "filter-_-ABM", 217 locations matching the filter "filter-_-Branch", etc.
+
 ### page_size
 
 Required: FALSE
@@ -132,10 +192,11 @@ Description:
 • Data masks need to be configured for each API.  See your Account Manager for details.
 
 
-Example:
+Example (assuming there is a configured mask named "short_set")
 
     /v1/search?q=Denver%20CO&mask=short_set
     
+
 ### callback
 
 Required: FALSE
