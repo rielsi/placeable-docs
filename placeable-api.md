@@ -27,8 +27,6 @@ Location: A single entity within a collection (Location = Item).
 
 ## View All Collections
 
-See the collections that are connected to your account.
-
 <b>Method:</b> GET
 
 <b>URL:</b>
@@ -43,8 +41,6 @@ NOTE: The appKey & appId have been omitted from all other examples in the docume
 
 
 ##View Specific Collection
-
-See information about a single collection.
 
 <b>Method:</b> GET
 
@@ -106,8 +102,6 @@ Search for locations based on specific keywords at the field level.
 
 
 ## Adding a New Location
-
-Create a new location within a specific collection.
 
 <b>Method:</b> POST
 
@@ -186,8 +180,6 @@ Create a new location within a specific collection.
 
 ## Updating an Existing Location
 
-Update the data for a location within a specific collection. 
-
 <b>Method:</b> PATCH
 
 <b>URL:</b>
@@ -207,3 +199,18 @@ Update the data for a location within a specific collection.
 	/boxes/543309812f1111620d0e21ba/items/53e3c2a820000004091dae13
 
 <b>Response:</b> Fully created JSON document
+
+
+## Deleting an Existing Location
+
+<b>Method:</b> DELETE
+
+<b>URL:</b>
+
+	/v1/boxes/[collection id]/items/[location id]
+	
+<b>Example:</b>
+
+	/v1/boxes/543309812f1111620d0e21ba/items/53e3c2a820000004091dae13
+	
+<b>Response:</b> 204 status code
