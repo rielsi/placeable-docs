@@ -50,7 +50,7 @@ See information about a single collection.
 
 <b>URL:</b>
 
-	/v1/boxes/[id]
+	/v1/boxes/[collection id]
 
 <b>Example:</b>
 
@@ -73,7 +73,7 @@ Search for locations based on specific keywords in the name, address, phone, & u
 </ul>
 <b>URL:</b>
 
-	/v1/boxes/[id]?q=[value]
+	/v1/boxes/[collection id]?q=[value]
 
 <b>Example:</b>
 
@@ -118,7 +118,7 @@ Create a new location within a specific collection.
 
 <b>URL:</b>
 
-	/v1/boxes/[id]/items
+	/v1/boxes/[collection id]/items
 	
 <b>Body:</b>
 
@@ -181,3 +181,29 @@ Create a new location within a specific collection.
 <b>Example:</b>
 
 	/boxes/543309812f1111620d0e21ba/items
+
+<b>Response:</b> Fully created JSON document
+
+## Updating an Existing Location
+
+Update the data for a location within a specific collection. 
+
+<b>Method:</b> PATCH
+
+<b>URL:</b>
+
+	/v1/boxes/[collection id]/items/[location id]
+
+<b>Body:</b>
+
+	{ 
+		"op" : "update",
+		"path": "[field name]", 
+		"value" : "[value]"
+	}
+
+<b>Example:</b>
+
+	/boxes/543309812f1111620d0e21ba/items/53e3c2a820000004091dae13
+
+<b>Response:</b> Fully created JSON document
