@@ -7,6 +7,12 @@ This is a read/write REST API that enables remote systems to add, edit, & remove
 
 The API is secured using a pre-shared appKey & appId. Each request to the API must have these parameters, or the service will respond with an HTTP status code of 400.
 
+<b>Example:</b>
+
+	https://app.placeable.com/v1/boxes?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
+	
+NOTE: The appKey & appId have been omitted from all other examples in the documentation for brevity and clarity.
+
 
 ## General Information
 
@@ -35,9 +41,7 @@ Location: A single entity within a collection (Location = Item).
 
 <b>Example:</b>
 
-	https://app.placeable.com/v1/boxes?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
-
-NOTE: The appKey & appId have been omitted from all other examples in the documentation for brevity and clarity.
+	/v1/boxes?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
 
 
 ##View Specific Collection
