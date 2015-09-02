@@ -181,7 +181,7 @@ Search for locations based on specific keywords at the field level.
 
 <b>Notes:</b>
 <ul>
-<li>All of the fields outlined above must be included with the POST call. The only field that requires a value is "pinPlacementConfirmed". Unless otherwise instructed by your account manager, this field should be set to "false" for all POST calls.</li>
+<li>All of the fields outlined above must be included with the POST call. The only field that requires a value is "pinPlacementConfirmed". Unless otherwise instructed by your account manager, this field should be set to "false".</li>
 <li>When setting the hoop (hours of operation) for a location it is best to send the data in Google's hour format. Information about these formats can be found <a href="https://support.google.com/business/answer/3370250?vid=1-635767449932514491-1285679727#hours" target="_blank">here</a>.</li>
 </ul>
 
