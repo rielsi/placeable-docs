@@ -25,11 +25,10 @@ For all POST, PATCH, & DELETE calls multiple updates are made by sending multipl
 Any of the calls outlined in this document can be made as HTTP or HTTPS.
 
 <b>Definitions</b>
-
-Collection: A single data set that belongs to a specific brand (Collection = Box).
-
-Location: A single entity within a collection (Location = Item).
-
+<ul>
+<li>Collection: A single data set that belongs to a specific brand (Collection = Box).</li>
+<li>Location: A single entity within a collection (Location = Item).</li>
+</ul>
 
 ## View All Collections
 
@@ -189,7 +188,6 @@ Search for locations based on specific keywords at the field level.
 
 	/boxes/543309812f1111620d0e21ba/items
 
-<b>Response:</b> Fully created JSON document
 
 ## Updating an Existing Location
 
@@ -211,8 +209,6 @@ Search for locations based on specific keywords at the field level.
 
 	/boxes/543309812f1111620d0e21ba/items/53e3c2a820000004091dae13
 
-<b>Response:</b> Fully created JSON document
-
 
 ## Deleting an Existing Location
 
@@ -225,5 +221,472 @@ Search for locations based on specific keywords at the field level.
 <b>Example:</b>
 
 	/v1/boxes/543309812f1111620d0e21ba/items/53e3c2a820000004091dae13
+
+
+## Response Details
+
+<b>Collection:</b>
+
+	{
+		"name": "Alex Cummings-1111111111111",
+		"dataMapping": [
+			"543309812f1111620d0e21b9"
+		],
+		"id": "543309812f1111620d0e21bb",
+		"mappingName": "Placeable_Locations.csv",
+		"syndicationConfigs": [],
+		"config": {
+			"fileId": "543309892f0000810c0e21bb"
+		},
+		"mappingSet": true,
+		"syndicated": false,
+		"validated": true,
+		"transformed": false,
+		"active": true,
+		"uploaded": true,
+		"dateCreated": 1412630913100,
+		"lastUpdated": 1412630913100,
+		"brandName": "Placeable",
+		"collectionGroupName": "Placeable",
+		"placeableKey": "",
+		"placeableSite": "",
+		"currentEditRecipe": "",
+		"currentPinPlacementRunId": "",
+		"metaData": {
+			"loading": "false",
+			"searchType": "brand"
+	}
 	
-<b>Response:</b> 204 status code
+<b>Location:</b>
+
+	{
+      "name": "Placeable",
+      "clientRefId": "55e637ae25000057000f5063",
+      "locationId": "12345",
+      "description": "",
+      "id": "55e637c1250000ad000f50ea",
+      "address": {
+        "street": "2601 Blake St",
+        "street2": "Ste 301",
+        "city": "Denver",
+        "state": "CO",
+        "postal": "80205",
+        "country": "US"
+      },
+      "geocode": {
+        "lat": 39.760256,
+        "long": -104.987145,
+        "accuracy": "PROVIDED"
+      },
+      "phone": {
+        "main": "(855) 433-7133",
+        "mobile": "",
+        "alternate": "",
+        "fax": ""
+      },
+      "urls": {
+        "facebook": "",
+        "google": "",
+        "bing": "",
+        "yahoo": "",
+        "yelp": "",
+        "local": "",
+        "foursquare": "",
+        "factual": "",
+        "yellowpages": ""
+      },
+      "photos": {},
+      "userFields": {},
+      "hoop": "",
+      "paymentTypes": "",
+      "languages": "",
+      "email": "",
+      "services1": "",
+      "openClosed": "",
+      "metaData": {
+        "thirdPartyScore": "99",
+        "locationScore": "99",
+        "facebookActivity": "0",
+        "pinSpreadScore": "5",
+        "pinSpreadBucket": "good",
+        "zipTransformation": "true",
+        "yellowpagesActivity": "0",
+        "googleActivity": "0",
+        "foursquareActivity": "0",
+        "pinScore": "0",
+        "yelpActivity": "0",
+        "pinBucket": "poor",
+        "pinPlacementScore": "0",
+        "completenessAverage": "99",
+        "pinPlacement": "true",
+        "activityTotal": "1"
+      },
+      "pinPlacementConfirmed": true,
+      "score": 99,
+      "pins": [
+        {
+          "lat": 0,
+          "long": 0,
+          "source": "facebook",
+          "name": "",
+          "address": {
+            "street": "",
+            "street2": "",
+            "city": "",
+            "state": "",
+            "postal": "",
+            "country": ""
+          },
+          "phone": {
+            "main": "",
+            "mobile": "",
+            "alternate": "",
+            "fax": ""
+          },
+          "rating": 0,
+          "distance": 10545342,
+          "responseCode": 200,
+          "responseTxt": "",
+          "success": false,
+          "url": "",
+          "stats": {
+          },
+          "website": ""
+        },
+        {
+          "lat": 0,
+          "long": 0,
+          "source": "factual",
+          "name": "",
+          "address": {
+            "street": "",
+            "street2": "",
+            "city": "",
+            "state": "",
+            "postal": "",
+            "country": ""
+          },
+          "phone": {
+            "main": "",
+            "mobile": "",
+            "alternate": "",
+            "fax": ""
+          },
+          "rating": 0,
+          "distance": 5064,
+          "responseCode": 200,
+          "responseTxt": "",
+          "success": true,
+          "url": "",
+          "stats": {
+          },
+          "website": ""
+        },
+        {
+          "lat": 0,
+          "long": 0,
+          "source": "foursquare",
+          "name": "",
+          "address": {
+            "street": "",
+            "street2": "",
+            "city": "",
+            "state": "",
+            "postal": "",
+            "country": ""
+          },
+          "phone": {
+            "main": "",
+            "mobile": "",
+            "alternate": "",
+            "fax": ""
+          },
+          "rating": 0,
+          "distance": 10545342,
+          "responseCode": 200,
+          "responseTxt": "",
+          "success": false,
+          "url": "",
+          "stats": {
+          },
+          "website": ""
+        },
+        {
+          "lat": 0,
+          "long": 0,
+          "source": "google",
+          "name": "",
+          "address": {
+            "street": "",
+            "street2": "",
+            "city": "",
+            "state": "",
+            "postal": "",
+            "country": ""
+          },
+          "phone": {
+            "main": "",
+            "mobile": "",
+            "alternate": "",
+            "fax": ""
+          },
+          "rating": 0,
+          "distance": 5085,
+          "responseCode": 200,
+          "responseTxt": "",
+          "success": true,
+          "url": "",
+          "stats": {
+          },
+          "website": ""
+        },
+        {
+          "lat": 0,
+          "long": 0,
+          "source": "yellowpages",
+          "name": "",
+          "address": {
+            "street": "",
+            "street2": "",
+            "city": "",
+            "state": "",
+            "postal": "",
+            "country": ""
+          },
+          "phone": {
+            "main": "",
+            "mobile": "",
+            "alternate": "",
+            "fax": ""
+          },
+          "rating": 0,
+          "distance": 10545342,
+          "responseCode": 200,
+          "responseTxt": "",
+                    "success": false,
+          "url": "",
+          "stats": {
+          },
+          "website": ""
+        },
+        {
+          "lat": 0,
+          "long": 0,
+          "source": "yelp",
+          "name": "",
+          "address": {
+            "street": "",
+            "street2": "",
+            "city": "",
+            "state": "",
+            "postal": "",
+            "country": ""
+          },
+          "phone": {
+            "main": "",
+            "mobile": "",
+            "alternate": "",
+            "fax": ""
+          },
+          "rating": 0,
+          "distance": 10545342,
+          "responseCode": 200,
+          "responseTxt": "",
+          "success": true,
+          "url": "",
+          "stats": {
+          },
+          "website": ""
+        }
+      ],
+      "errors": [],
+      "compare": {
+        "locationId": "55e637c1250000ad000f50ea",
+        "clientId": "55e637ae25000057000f5063",
+        "diffs": [
+          {
+            "api": "facebook",
+            "compares": [
+              {
+                "source": "facebook",
+                "field": "address.street",
+                "value": "2601 Blake St",
+                "sourceValue": ""
+              },
+              {
+                "source": "facebook",
+                "field": "address.city",
+                "value": "Denver",
+                "sourceValue": ""
+              },
+              {
+                "source": "facebook",
+                "field": "address.state",
+                "value": "CO",
+                "sourceValue": ""
+              },
+              {
+                "source": "facebook",
+                "field": "address.postal",
+                "value": "80205",
+                "sourceValue": ""
+              },
+              {
+                "source": "facebook",
+                "field": "phone.main",
+                "value": "(855) 433-7133",
+                "sourceValue": ""
+              },
+              {
+                "source": "facebook",
+                "field": "brand",
+                "value": "Placeable",
+                "sourceValue": ""
+              }
+            ],
+            "found": false,
+            "rating": 0
+          },
+          {
+            "api": "factual",
+            "compares": [
+              {
+                "source": "factual",
+                "field": "address.street",
+                "value": "2601 Blake St",
+                "sourceValue": "2601 Blake Ave"
+              }
+            ],
+            "found": true,
+            "rating": 0
+          },
+          {
+            "api": "foursquare",
+            "compares": [
+              {
+                "source": "foursquare",
+                "field": "address.street",
+                "value": "2601 Blake St",
+                "sourceValue": ""
+              },
+              {
+                "source": "foursquare",
+                "field": "address.city",
+                "value": "Denver",
+                "sourceValue": ""
+              },
+              {
+                "source": "foursquare",
+                "field": "address.state",
+                "value": "CO",
+                "sourceValue": ""
+              },
+              {
+                "source": "foursquare",
+                "field": "address.postal",
+                "value": "80205",
+                "sourceValue": ""
+              },
+              {
+                "source": "foursquare",
+                "field": "phone.main",
+                "value": "(855) 433-7133",
+                "sourceValue": ""
+              },
+              {
+                "source": "foursquare",
+                "field": "brand",
+                "value": "Placeable",
+                "sourceValue": ""
+              }
+            ],
+            "found": false,
+            "rating": 0
+          },
+          {
+            "api": "google",
+            "compares": [
+              {
+                "source": "google",
+                "field": "brand",
+                "value": "Placeable",
+                "sourceValue": "Placeable-Denver"
+              }
+            ],
+            "found": true,
+            "rating": 0
+          },
+          {
+            "api": "yellowpages",
+            "compares": [
+              {
+                "source": "yellowpages",
+                "field": "address.street",
+                "value": "2601 Blake St",
+                "sourceValue": ""
+              },
+              {
+                "source": "yellowpages",
+                "field": "address.city",
+                "value": "Denver",
+                "sourceValue": ""
+              },
+              {
+                "source": "yellowpages",
+                "field": "address.state",
+                "value": "CO",
+                "sourceValue": ""
+              },
+              {
+                "source": "yellowpages",
+                "field": "address.postal",
+                "value": "80205",
+                "sourceValue": ""
+              },
+              {
+                "source": "yellowpages",
+                "field": "phone.main",
+                "value": "(855) 433-7133",
+                "sourceValue": ""
+              },
+              {
+                "source": "yellowpages",
+                "field": "brand",
+                "value": "Placeable",
+                "sourceValue": ""
+              }
+            ],
+            "found": false,
+            "rating": 0
+          },
+          {
+            "api": "yelp",
+            "compares": [
+              {
+                "source": "yelp",
+                "field": "address.street",
+                "value": "2601 Blake St",
+                "sourceValue": "2601 Blake Ave"
+              }
+            ],
+            "found": true,
+            "rating": 0
+          }
+        ],
+        "created": 1441151804380
+      },
+      "created": 1441150914433,
+      "lastUpdated": 1441151804382,
+      "crowdsourceKey": "",
+      "matchStats": {
+        "factual": "match",
+        "google": "match",
+        "yellowpages": "match",
+        "foursquare": "match",
+        "facebook": "match",
+        "yelp": "match"
+      },
+      "bucket": "good"
+    }
+    
+    
