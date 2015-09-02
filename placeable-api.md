@@ -38,11 +38,7 @@ Location: A single entity within a collection (Location = Item).
 <b>URL:</b>
 	
 	/v1/boxes
-
-<b>Example:</b>
-
-	/v1/boxes?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
-
+	
 
 ##View Specific Collection
 
