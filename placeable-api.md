@@ -94,11 +94,24 @@ Search for locations based on specific keywords at the field level.
 
 <b>URL:</b>
   
-    /[id]/advanced/search?q=[{"operator":"[contains|equals_to|not_contains]","field":"[field name]","value":"[field value]","filter":"[and|or]"}]
+    /collection id]/advanced/search?q=[{"operator":"[contains|equals_to|not_contains]","field":"[field name]","value":"[field value]","filter":"[and|or]"}]
 
 <b>Example:</b>
 
     /543309812f1111620d0e21ba/advanced/search?q=[{"operator":"contains","field":"address.state","value":"CO","filter":"and"}]&offset=0&limit=20
+
+
+## View Specific Location
+
+<b>Method:</b> GET
+
+<b>URL:</b>
+
+	/v1/boxes/[collection id]/items/[location id]
+
+<b>Example:</b>
+
+	/v1/boxes/543309812f1111620d0e21ba/items/53e3c2a820000004091dae13
 
 
 ## Adding a New Location
