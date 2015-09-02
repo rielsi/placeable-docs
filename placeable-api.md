@@ -176,7 +176,7 @@ Search for locations based on specific keywords at the field level.
 	"pinPlacementConfirmed":false,
 	"email":"",
 	"openClosed":""
-}
+	}
 
 <b>Notes:</b>
 <ul>
