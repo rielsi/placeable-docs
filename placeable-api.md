@@ -35,7 +35,7 @@ Location: A single entity within a collection (Location = Item).
 
 <b>Example:</b>
 
-	/v1/boxes?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
+	https://app.placeable.com/v1/boxes?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
 
 NOTE: The appKey & appId have been omitted from all other examples in the documentation for brevity and clarity.
 
