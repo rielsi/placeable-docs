@@ -688,5 +688,3 @@ Search for locations based on specific keywords at the field level.
       },
       "bucket": "good"
     }
-    
-    
