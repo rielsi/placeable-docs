@@ -199,11 +199,13 @@ Search for locations based on specific keywords at the field level.
 
 <b>Body:</b>
 
-	{ 
-		"op" : "update",
-		"path": "[field name]", 
-		"value" : "[value]"
-	}
+	[
+		{ 
+			"op" : "update",
+			"path": "[field name]", 
+			"value" : "[value]"
+		}
+	]
 
 <b>Example:</b>
 
