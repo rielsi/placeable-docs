@@ -7,9 +7,13 @@ This is an updated version of the Placeable Workbench read/write REST API. In ad
 
 The API is secured using a pre-shared appKey & appId. Each request to the API must have these parameters, or the service will respond with an HTTP status code of 400.
 
-<b>Example:</b>
+<b>Production Example:</b>
 
 	https://workbench.placeable.com/v2/collection?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
+	
+<b>UAT Example:</b>
+
+	https://http://workbench-ui-uat.placeable.in/v2/collection?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
 	
 NOTE: The appKey & appId have been omitted from all other examples in the documentation for brevity and clarity.
 
@@ -277,7 +281,7 @@ This header is required for all calls and allows the application to track what u
 
 ## Basic Search
 
-Search for items based on values within any of the fields outlined in the "searchFields" section of the collection. A search for “CO” would return every item in the state of Colorado and also any item with a street name of “Cook”, “County”, & “Common”. If you would like to return all of the items within the collection leave the query value null.
+Search for items based on values within any of the fields outlined in the "searchFields" section of the collection. The search will look for exact matches to the query string. A search for "Colorado" would return items in the state of "Colorado" and also items with an address of "123 Colorado Blvd".
 
 <b>Method:</b> GET
 
@@ -297,7 +301,7 @@ Search for items based on values within any of the fields outlined in the "searc
 </ul>
 <b>URL:</b>
 
-	/v2/collection/[collectionId]/items?q=[value]
+	/v2/collection/[collectionId]/items?q=[value]&limit=[1-25]&offset=[n]
 
 <b>Example:</b>
 
@@ -319,7 +323,7 @@ If no items match the query you will recieve the following response:
 
 ## Advanced Search
 
-Search for items based on field specific values.
+Search for items based on field specific values. All user fields should be prefixed with the value of "fields." in the payload of the request.
 
 <b>Method:</b> POST
 
@@ -340,7 +344,7 @@ Search for items based on field specific values.
     "q" : [
         {
         "operator":"[contains | equals_to | not_contains]", 
-        "field":"[fieldName]", 
+        "field":"[fields.fieldName]", 
         "value":"[fieldValue]", 
         "filter":"[and | or]"
         }
@@ -473,12 +477,12 @@ The newly created item formatted to match the field list of all other items in t
 	[
 		{ 
 			"op" : "update",
-			"field": "fields.Main Phone", 
+			"field": "Main Phone", 
 			"value" : "(222) 222-2222"
 		},
 		{ 
 			"op" : "update",
-			"field": "fields.City", 
+			"field": "City", 
 			"value" : "Boulder"
 		}
 	]
