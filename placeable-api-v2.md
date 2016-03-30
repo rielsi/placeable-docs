@@ -7,13 +7,9 @@ This is an updated version of the Placeable Workbench read/write REST API. In ad
 
 The API is secured using a pre-shared appKey & appId. Each request to the API must have these parameters, or the service will respond with an HTTP status code of 400.
 
-<b>Production Example:</b>
+<b>Example:</b>
 
 	https://workbench.placeable.com/v2/collection?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
-	
-<b>UAT Example:</b>
-
-	https://http://workbench-ui-uat.placeable.in/v2/collection?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
 	
 NOTE: The appKey & appId have been omitted from all other examples in the documentation for brevity and clarity.
 
@@ -37,20 +33,6 @@ This header is required for all calls and allows the application to track what u
 <li>Collection: A single data set that belongs to a specific brand.</li>
 <li>Item: A single entity within a collection.</li>
 </ul>
-
-
-## View All Collections
-
-<b>Method:</b> GET
-
-<b>Required Header:</b> 
-<ul>
-<li>X-UserEmail - [emailAddress]</li>
-</ul>
-
-<b>URL:</b>
-	
-	/v2/collection
 
 
 ## View Specific Collection
