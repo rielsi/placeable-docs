@@ -9,7 +9,7 @@ The API is secured using a pre-shared appKey & appId. Each request to the API mu
 
 <b>Example:</b>
 
-	https://workbench.placeable.com/v2/collection?appId:12345678&appKey:abcdefghijklmnopqrstuvwxyz000000
+	https://workbench.placeable.com/v2/collection?appId=12345678&appKey=abcdefghijklmnopqrstuvwxyz000000
 	
 NOTE: The appKey & appId have been omitted from all other examples in the documentation for brevity and clarity.
 
