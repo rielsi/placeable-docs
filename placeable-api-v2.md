@@ -325,7 +325,7 @@ Search for items based on field specific values. All user fields should be prefi
 {
     "q" : [
         {
-        "operator":"[contains | equals_to | not_contains]", 
+        "operator":"[contains | equals | not_contains]", 
         "field":"[fields.fieldName]", 
         "value":"[fieldValue]", 
         "filter":"[and | or]"
