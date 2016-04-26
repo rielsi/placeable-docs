@@ -543,7 +543,7 @@ The patched item with the updated value(s).
 
 <b>Optional Parameters:</b>
 <ul>
-<li>type: The format of the file you would like to export. Available options are "xlsx" & "tsv". If no type is specified the file will export as a "csv".</li>
+<li>type: The format of the file you would like to export. Available options are "csv" & "tsv". If no type is specified the file will export as a "xlsx".</li>
 <li>recipeId: The Id of a recipe that should be applied to the export. A recipe may transform or filter data.</li>
 </ul>
 
