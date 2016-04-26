@@ -490,3 +490,97 @@ The patched item with the updated value(s).
 <b>Response:</b>
 
 "true"
+
+
+## Pulling A List of Custom Export Templates & Recipes
+
+<b>Method:</b> GET
+
+<b>Required Headers:</b> 
+<ul>
+<li>X-UserEmail - [emailAddress]</li>
+<li>X-Role - ADMIN</li>
+</ul>
+
+<b>Optional Parameters:</b>
+<ul>
+<li>recipeType: The type of recipe that you would like to query. To find all custom file templates set the type to "custom"</li>
+</ul>
+
+<b>URL:</b>
+
+	/v2/collection/[collectionId]/recipes??recipeType=custom
+	
+<b>Example:</b>
+
+	/v2/collection/543309812f1111620d0e21ba/recipes??recipeType=custom
+	
+<b>Response:</b>
+
+```json
+[  
+  {
+    "id": "5717234c0b00004900d72g44",
+    "collectionId": "543309812f1111620d0e21ba",
+    "name": "New Custom File",
+    "transformations": [],
+    "recipeType": "custom",
+    "templateId": "521f9d4b170000n3e8d8bb2t",
+    "queryFilter": []
+  }
+]
+```
+
+
+## Creating a File
+
+<b>Method:</b> GET
+
+<b>Required Headers:</b> 
+<ul>
+<li>X-UserEmail - [emailAddress]</li>
+</ul>
+
+<b>Optional Parameters:</b>
+<ul>
+<li>type: The format of the file you would like to export. Available options are "xlsx" & "tsv". If no type is specified the file will export as a "csv".</li>
+<li>recipeId: The Id of a recipe that should be applied to the export. A recipe may transform or filter data.</li>
+</ul>
+
+<b>URL:</b>
+
+	/v2/collection/[collectionId]/export/[templateId]
+	
+<b>Example:</b>
+
+	/v2/collection/543309812f1111620d0e21ba/export/521f9d4b170000n3e8d8bb2t
+	
+<b>Response:</b>
+
+```json
+{
+	"fileId":"571ga59117000090add4cb30"
+}
+```
+
+
+## Downloading a File
+
+<b>Method:</b> GET
+
+<b>Required Headers:</b> 
+<ul>
+<li>X-UserEmail - [emailAddress]</li>
+</ul>
+
+<b>URL:</b>
+
+	/v2/collection/[collectionId]/file/[fileId]
+	
+<b>Example:</b>
+
+	/v2/collection/543309812f1111620d0e21ba/file/571ga59117000090add4cb30
+	
+<b>Response:</b>
+
+The fields and values included in the template & recipe.
