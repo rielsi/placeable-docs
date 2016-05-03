@@ -513,7 +513,7 @@ The patched item with the updated value(s).
 	
 <b>Example:</b>
 
-	/v2/collection/543309812f1111620d0e21ba/recipes??recipeType=custom
+	/v2/collection/543309812f1111620d0e21ba/recipes?recipeType=custom
 	
 <b>Response:</b>
 
