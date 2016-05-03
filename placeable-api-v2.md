@@ -509,7 +509,7 @@ The patched item with the updated value(s).
 
 <b>URL:</b>
 
-	/v2/collection/[collectionId]/recipes??recipeType=custom
+	/v2/collection/[collectionId]/recipes?recipeType=custom
 	
 <b>Example:</b>
 
