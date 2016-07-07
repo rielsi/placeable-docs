@@ -581,10 +581,11 @@ The patched item with the updated value(s).
 	/v2/collection/543309812f1111620d0e21ba/export/status/571ga59117000090add4cb30
 	
 <b>Response:</b>
-
-404 Status Code: The file Id has not yet been saved in the database
-202 Status Code: The file is being processed
-200 Status Code: The file is ready to download
+<ul>
+<li>404 Status Code: The file Id has not yet been saved in the database</li>
+<li>202 Status Code: The file is being processed</li>
+<li>200 Status Code: The file is ready to download</li>
+</ul>
 
 
 ## Downloading a File
