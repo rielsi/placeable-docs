@@ -499,7 +499,6 @@ The patched item with the updated value(s).
 <b>Required Headers:</b> 
 <ul>
 <li>X-UserEmail - [emailAddress]</li>
-<li>X-Role - ADMIN</li>
 </ul>
 
 <b>Optional Parameters:</b>
