@@ -564,6 +564,30 @@ The patched item with the updated value(s).
 ```
 
 
+## Checking Export Status
+
+<b>Method:</b> GET
+
+<b>Required Headers:</b> 
+<ul>
+<li>X-UserEmail - [emailAddress]</li>
+</ul>
+
+<b>URL:</b>
+
+	/v2/collection/[collectionId]/export/status[fileId]
+	
+<b>Example:</b>
+
+	/v2/collection/543309812f1111620d0e21ba/export/status/571ga59117000090add4cb30
+	
+<b>Response:</b>
+
+404 Status Code: The file Id has not yet been saved in the database
+202 Status Code: The file is being processed
+200 Status Code: The file is ready to download
+
+
 ## Downloading a File
 
 <b>Method:</b> GET
