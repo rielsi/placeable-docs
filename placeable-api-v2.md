@@ -1,4 +1,4 @@
-# Placeable Workbench Locator API v2
+# Placeable Workbench API v2
 
 This is an updated version of the Placeable Workbench read/write REST API. In addition to the core query, add, edit, & remove functionality this API has new endpoints that give insights into change history.
 
